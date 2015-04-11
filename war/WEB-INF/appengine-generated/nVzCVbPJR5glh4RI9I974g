@@ -1,0 +1,202 @@
+Please note that we will have one Java class file (ExternalConfigService.Java) which acts like controller file and all the webservice calls reach out to this control file. In this control file we will fetch the Param value of Action and then as per the value, control will be passed to serve whether it is Initial call or Subsequent call or Summary call or Save call.
+
+
+
+
+Initial URL
+http://uscaramap154:8080/configurator/Modeldetails?Action=Initial&ATO%MODEL%NAME=TM_Driver_ATO&Source%Application=B2C&Business%Unit=US&Currency=USD& Order%Type=TM%Ecommerce&Model=R15%TP
+
+http://uscaramap154:8080/rest/config/initialize?MODELNAME=TM_Driver_ATO&SrcApp=B2C&BU=US&Currency=USD&OrderType=TM%Ecommerce&Model=R15%TP
+MODELNAME is mandatory parameter, all other are optional or make mandatory as required by Business. Atleast initial selections can be optional.
+
+XML Output for Initial Call (Please note Currency and Pricelist information will not be sent back)
+<ModelDetails>
+<Session-ID>aghlkj678979</Session-ID>
+<ATO Model Name>
+<Value> TM_Driver_ATO</Value>
+	<Head>------------>Field Name is not consistent across the models
+	<Field Name>
+	<Value>Source Application</Value>
+		<LOV>
+		<Value>Option=B2C</Value>
+		</LOV>
+	</Field Name>	
+	<Field Name>
+	<Value>Business Unit</Value>
+		<LOV>
+		<Value>Option=US</Value>
+		</LOV>
+	</Field Name>	
+	<Field Name>
+	<Value>Order Type</Value>
+		<LOV>
+		<Value>Option=Ecommerce</Value>
+		</LOV>
+	</Field Name>		
+	<Field Name>
+	<Value>Model</Value>
+		<LOV>
+		<Value>Option=R1 SL</Value>
+		</LOV>
+	</Field Name>
+	<Field Name>
+	<Value>Gender</Value>
+		<LOV>
+		<Value>Option=M;Default=Y;Sortcode=1</Value>
+		<Value>Option=F;Default=N;Sortcode=2</Value>
+		</LOV>
+	</Field Name>
+	<Field Name>
+	<Value>Hand</Value>
+		<LOV>
+		<Value>Option=RH;Default=N;Sortcode=1</Value>
+		<Value>Option=LH;Default=N;Sortcode=2</Value>
+		</LOV>
+	</Field Name>
+	<Field Name>
+	<Value>Loft</Value>
+		<LOV>
+		<Value>Option=9.5;Default=N;Sortcode=1</Value>
+		<Value>Option=10.5;Default=N;Sortcode=2</Value>
+		<Value>Option=12;Default=N;Sortcode=3</Value>
+		<Value>Option=14;Default=N;Sortcode=4</Value>
+		</LOV>
+	</Field Name>
+	<Field Name>
+	<Value>Sleeve Adjustment</Value>
+		<LOV>
+		<Value>Option=Upright;Default=N;Sortcode=1</Value>
+		<Value>Option=0.75UP;Default=N;Sortcode=2</Value>
+		<Value>Option=Higher;Default=N;Sortcode=3</Value>
+		<Value>Option=0.75;Default=N;Sortcode=4</Value>
+		<Value>Option=Standard;Default=Y;Sortcode=5</
+		<Value>Option=-0.75;Default=N;Sortcode=6</
+		<Value>Option=Lower;Default=N;Sortcode=7</
+		<Value>Option=-0.75UP;Default=N;Sortcode=8</
+		</LOV>
+	</Field Name>
+	<Field Name>
+	<Value>Sole Adjustment</Value>
+		<LOV>
+		<Value>Option=Max Draw;Default=N;Sortcode=1</Value>
+		<Value>Option=Max Distance;Default=N;Sortcode=2</Value>
+		<Value>Option=Standard;Default=Y;Sortcode=3</Value>
+		<Value>Option=Max Fade;Default=N;Sortcode=4</Value>
+		<Value>Option=Max Stability;Default=N;Sortcode=5</Value>
+		</LOV>
+	</Field Name>
+	</Head>------------>Field Name is not consistent across the models
+	<Shaft Option Features>------------>Field Name is not consistent across the models
+	<Field Name>
+	<Value>Shaft Vendor</Value>
+		<LOV>
+		<Value>Option=Aldlia;Default=N;Sortcode=1</Value>
+		<Value>Option=Matrix;Default=N;Sortcode=2</Value>
+		<Value>Option=Oban;Default=N;Sortcode=3</Value>
+		<Value>Option=UST;Default=N;Sortcode=4</Value>
+		</LOV>
+	</Field Name>
+	<Field Name>
+	<Value>Shaft Model</Value>
+		<LOV>
+		<Value>Option=5X3+15$;Default=N;Sortcode=1</Value>
+		<Value>Option=6M3;Default=N;Sortcode=2</Value>
+		<Value>Option=6Q3+50$;Default=N;Sortcode=3</Value>
+		<Value>Option=7M3;Default=N;Sortcode=4</Value>
+		</LOV>
+	</Field Name>
+	<Field Name>
+	<Value>Shaft Flex</Value>
+		<LOV>
+		<Value>Option=5.5;Default=N;Sortcode=1</Value>
+		<Value>Option=6.0;Default=N;Sortcode=2</Value>
+		<Value>Option=6.5;Default=N;Sortcode=3</Value>
+		<Value>Option=A;Default=N;Sortcode=4</Value>
+		</LOV>
+	</Field Name>
+	<Field Name>
+	<Value>Tipping Adjustment</Value>
+		<LOV>
+		<Value>Option=Standard;Default=N;Sortcode=1</Value>
+		<Value>Option=-0.5";Default=N;Sortcode=2</Value>
+		<Value>Option=-1.5";Default=N;Sortcode=3</Value>
+		</LOV>
+	</Field Name>	
+	<Field Name>
+	<Value>Length Adjustment</Value>
+		<LOV>
+		<Value>Option=Standard;Default=N;Sortcode=1</Value>
+		<Value>Option=-0.25";Default=N;Sortcode=2</Value>
+		<Value>Option=-0.50";Default=N;Sortcode=3</Value>
+		<Value>Option=-0.75";Default=N;Sortcode=4</Value>
+		<Value>Option=-1.0";Default=N;Sortcode=5</Value>		
+		</LOV>
+	</Field Name>
+	</Shaft Option Features>------------>Field Name is not consistent across the models
+	<Grip Option Features>------------>Field Name is not consistent across the models
+	<Field Name>
+	<Value>Grip Vendor</Value>
+		<LOV>
+		<Value>Option=Lamkin;Default=Y;Sortcode=1</Value>
+		<Value>Option=Taylor Made";Default=N;Sortcode=2</Value>
+		<Value>Option=GolfPride";Default=N;Sortcode=3</Value>
+		</LOV>
+	</Field Name>
+	<Field Name>
+	<Value>Grip Model</Value>
+		<LOV>
+		<Value>Option=Tour Velvet TM Logo+10$;Default=N;Sortcode=1</Value>
+		<Value>Option=Tour Velvet Undersize";Default=N;Sortcode=2</Value>
+		<Value>Option=VDR White+25$";Default=N;Sortcode=3</Value>
+		</LOV>
+	</Field Name>
+	<Value>Grip Wraps</Value>
+		<LOV>
+		<Value>Option=1 Extra Wrap;Default=N;Sortcode=1</Value>
+		<Value>Option=2 Extra Wrap";Default=N;Sortcode=2</Value>
+		<Value>Option=Standard";Default=N;Sortcode=3</Value>
+		</LOV>
+	</Field Name>
+	<Field Name>
+	<Value>Grip Logo</Value>
+		<LOV>
+		<Value>Option=Up;Default=N;Sortcode=1</Value>
+		<Value>Option=Down;Default=N;Sortcode=2</Value>
+		</LOV>
+	</Field Name>
+	<Grip Option Features>------------>Field Name is not consistent across the models
+</ATO Model Name>	
+</ModelDetails>
+--------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+Save URL
+http://uscaramap154:8080/configurator/Modeldetails?Action=Save&Session-ID=aghlkj678979
+
+http://uscaramap154:8080/rest/config/save
+Request Header Param: Session-ID=aghlkj678979
+
+XML Output for Save Call
+<ModelDetails>
+<Session-ID>aghlkj678979</Session-ID>
+<ATO Model Name>
+<Value> TM_Driver_ATO</Value>
+	<Field Name>
+	<Value>Config Id= 45608</Value>
+	</Field Name>
+	<Field Name>
+	<Value>Config Version=1.0</Value>
+	</Field Name>
+	<Field Name>
+	<Value>SPN=R15_9.5_M_RH_STD_STD_NA_RulZ45_L_STD_STD_STD_TM360REC_STD_UP</Value>
+	</Field Name>
+	<Field Name>
+	<Value>ATP Date=20-April-2015 </Value>
+	</Field Name>
+	<Field Name>
+	<Value>Price Per Club=300</Value>
+	</Field Name>
+	<Field Name>
+	<Value>Club Count=1</Value>
+	</Field Name>		
+</ATO Model Name>	
+</ModelDetails>

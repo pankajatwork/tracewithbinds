@@ -1,0 +1,2 @@
+serviceClass: com.pankaj.firstgae.client.GreetingService
+path: 4D4D917CF6C7CE1F54529BF82BA01ED4.gwt.rpc

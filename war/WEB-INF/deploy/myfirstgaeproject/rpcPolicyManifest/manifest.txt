@@ -1,0 +1,3 @@
+# Module myfirstgaeproject
+# RPC service class, partial path of RPC policy file
+com.pankaj.firstgae.client.GreetingService, 4D4D917CF6C7CE1F54529BF82BA01ED4.gwt.rpc
